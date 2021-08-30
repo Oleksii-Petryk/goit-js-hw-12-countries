@@ -1,8 +1,8 @@
-import { Refs } from "./Refs";
-import { listItem } from '../templates/listItem';
+import { refs } from './refs.js';
+import listItem from '../templates/listItem.hbs';
 
 
 export function renderCountriesList(arrCountry) {
     const countriesList = listItem(arrCountry);
-    Refs.list.insertAdjacentHTML = ('afterbegin', countriesList);
+    refs.container.insertAdjacentHTML('beforeend', countriesList);
 };

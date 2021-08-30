@@ -3,19 +3,17 @@ body {
 }
 
 .container {
-  min-height: 100vh;
-  width: 1000px;
-  margin-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
 }
 
 .input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   width: 500px;
   height: 50px;
   padding-left: 10px;
@@ -26,30 +24,28 @@ body {
 }
 
 .countries-list {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-top: 30px;
-  padding-left: 0px;
+  padding: 15px;
   list-style: none;
-
+  border-radius: 5px;
   width: 500px;
   min-height: 150px;
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 1.25;
-}
 
-.country-card,
-.countries-list {
-  width: 600px;
-}
-
-.countries-list {
-  font-size: 20px;
+  background-color: rgb(211, 211, 211);
 }
 
 .countries-list__item {
   list-style: none;
+  margin-top: 0px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .country-card__name {
@@ -59,7 +55,16 @@ body {
 
 .profile {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+.profile__text {
+  padding-left: 10px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgb(211, 211, 211);
 }
 
 .country-info {

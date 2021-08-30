@@ -6,6 +6,6 @@ export function errorNotice() {
     return error({
         text: 'To many matches found. Please enter a more specific query!',
         sticker: false,
-        delay: 5000
+        delay: 2000
     });
 };

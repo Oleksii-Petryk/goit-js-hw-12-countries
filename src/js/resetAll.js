@@ -1,9 +1,6 @@
-import { Refs } from "./Refs";
+import { refs } from './refs.js';
 
 export function htmlCleaner() {
-    Refs.list.innerHTML = '';
+    refs.container.innerHTML = '';
 };
 
-export function inputCleaner() {
-    Refs.input.value = '';
-}

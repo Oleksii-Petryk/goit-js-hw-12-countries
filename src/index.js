@@ -1,37 +1,35 @@
 import debounce from 'lodash.debounce';
-import { Refs } from './js/Refs';
-import fetchCountries from './js/fetchCountries';
-import { htmlCleaner, inputCleaner } from './js/resetAll';
-import { errorNotice } from './js/errorNotice';
-import { inputNoticeError } from './js/inputNoticeError';
-import { renderCountriesList } from './js/renderCountriesList';
-import {renderCountryCard} from './js/renderCountryCard';
+import { refs }  from './js/refs.js';
+import fetchCountries from './js/fetchCountries.js';
+import { htmlCleaner, profileRemover } from './js/resetAll.js';
+import { errorNotice } from './js/errorNotice.js';
+import { inputNoticeError } from './js/inputNoticeError.js';
+import { renderCountriesList }  from './js/renderCountriesList.js';
+import { renderCountryCard } from './js/renderCountryCard.js';
 
 
-Refs.input.addEventListener('input', debounce(onInputChange, 2000));
+refs.input.addEventListener('input', debounce(onInputChange, 500));
 
 
-function onInputChange (e) {
-    let queryCountryName = e.target.value;
-    fetchCountries(queryCountryName)
+function onInputChange() {
+    
+    fetchCountries(refs.input.value)
         .then(arrCountry => {
             if (arrCountry.length > 10) {
                 htmlCleaner();
                 errorNotice();
             } else if (arrCountry.length >= 2 && arrCountry.length <= 10) {
-                // console.log(arrCountry);
-                // renderCountriesList(arrCountry);
+                htmlCleaner();
+                renderCountriesList(arrCountry);
                 
             } else {
+                htmlCleaner();
                 renderCountryCard(arrCountry);
-                // inputCleaner();
-                console.log(arrCountry);
-                
+                   
             }
         })
         .catch(() => {
             htmlCleaner();
             inputNoticeError();
-            
         });
 };
