@@ -1,0 +1,94 @@
+body {
+  background-color: rgb(180, 180, 218);
+}
+
+.container {
+  min-height: 100vh;
+  width: 1000px;
+  margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 50px;
+  padding-left: 10px;
+  outline: thin;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: rgb(211, 211, 211);
+}
+
+.countries-list {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 30px;
+  padding-left: 0px;
+  list-style: none;
+
+  width: 500px;
+  min-height: 150px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.country-card,
+.countries-list {
+  width: 600px;
+}
+
+.countries-list {
+  font-size: 20px;
+}
+
+.countries-list__item {
+  list-style: none;
+}
+
+.country-card__name {
+  text-align: center;
+  font-size: 40px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-info {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.country-info__item {
+  margin-bottom: 20px;
+}
+
+.country-info__item--head {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.language {
+  margin: 0;
+}
+
+.language__item {
+  margin-top: 10px;
+}
+
+.countries-list {
+  padding: 0;
+}
+
+.pnotify-text-with-max-height {
+  overflow-y: visible;
+}
